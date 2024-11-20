@@ -1,10 +1,10 @@
 def get_matrix(m, n, value):
     matrix = []
     for i in range(m):
-        row = []
+        leer = []
         for j in range(n):
-            row.append(value)
-        matrix.append(row)
+            leer.append(value)
+        matrix.append(leer)
     return matrix
 
 result1 = get_matrix(2, 8, 7)
