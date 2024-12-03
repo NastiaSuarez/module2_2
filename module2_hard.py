@@ -1,12 +1,12 @@
 a = int(input("Введите число: "))
 
 def find_pairs(a):
-    pairs = []
+    pairs = set()
     for x in range(1, a):
-        for k in range(1, a // x + 1):
-            y = a - x * k
-            if y >= x and a % (x + y) == 0:
-                pairs.append((x, y))
+        for y in range(x+1, a):
+
+            if a % (x + y) == 0:
+                pairs.add((x, y))
     return pairs
 if not (3 <= a <= 20):
         print("Значение a должно быть в диапазоне от 3 до 20")
@@ -20,5 +20,4 @@ if result:
              print(pair)
 else:
     print("Пар не найдено.")
-
 
